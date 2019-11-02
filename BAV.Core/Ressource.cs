@@ -4,12 +4,19 @@ using System.Text;
 
 namespace BAV.Core
 {
-    public abstract class Ressource
+    public class Ressource
     {
-        public abstract string Name { get; }
+        public string Name { get; }
 
-        public abstract decimal InitialStorage { get; }
+        public decimal InitialStorage { get; }
 
-        public abstract decimal InitialProduction { get; }
+        public decimal InitialProduction { get; }
+
+        public Ressource(string name, decimal initialStorage, decimal initialProduction)
+        {
+            this.Name = name;
+            this.InitialStorage = initialStorage;
+            this.InitialProduction = initialProduction;
+        }
     }
 }
