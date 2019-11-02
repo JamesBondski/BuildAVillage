@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+<MatAppBarContainer>
+    <MatAppBar Style="z-index: 100;" Class="mat">
+        <MatAppBarRow>
+            <MatAppBarSection>
+                <MatAppBarTitle>Build A Village</MatAppBarTitle>
+            </MatAppBarSection>
+            <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+             </MatAppBarSection>
+        </MatAppBarRow>
+    </MatAppBar>
+
+    <MatAppBarContent>
+        <MatDrawerContainer Style="width: 100vw; height: 100vh;">
+            <MatDrawer Opened="true">
+                <NavMenu />
+            </MatDrawer>
+            <MatDrawerContent>
+                @Body
+            </MatDrawerContent>
+        </MatDrawerContainer>
+    </MatAppBarContent>
+
+</MatAppBarContainer>

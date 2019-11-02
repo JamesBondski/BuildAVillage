@@ -1,0 +1,19 @@
+using BuildAVillage.Connect;
+using Microsoft.AspNetCore.Components.Builder;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace BuildAVillage
+{
+    public class Startup
+    {
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddSingleton<Game>();
+        }
+
+        public void Configure(IComponentsApplicationBuilder app)
+        {
+            app.AddComponent<App>("app");
+        }
+    }
+}

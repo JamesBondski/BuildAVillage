@@ -1,0 +1,14 @@
+﻿@page "/main"
+@using BuildAVillage.Components
+@inject Game game
+
+<Ressources Village="game.world.Village" />
+
+<MatButton @onclick="OnTurnClick">Turn</MatButton>
+
+@code {
+    void OnTurnClick()
+    {
+        game.world.Village.Turn();
+    }
+}

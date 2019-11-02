@@ -1,0 +1,21 @@
+﻿@page "/newgame"
+@inject NavigationManager nav
+@inject Game game
+
+<MatCard Style="width:400px">
+    <MatCardContent Style="padding: 1rem">
+        <h3>New Game</h3>
+
+        <p>Name of the village: <MatTextField @bind-Value="villageName" /> </p>
+        <MatButton @onclick="StartGameClick">Start Game</MatButton>
+    </MatCardContent>
+</MatCard>
+@code {
+    private string villageName = null;
+
+    private void StartGameClick()
+    {
+        game.NewGame(villageName);
+        nav.NavigateTo("/main");
+    }
+}

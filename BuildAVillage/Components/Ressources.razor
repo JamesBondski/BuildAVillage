@@ -1,0 +1,15 @@
+﻿
+
+<div class="mat-layout-grid">
+    <div class="mat-layout-grid-inner">
+        @foreach (var kvp in Village.Storage)
+        {
+            <RessourceDisplay Village="@Village" Ressource="@kvp.Key" />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Village Village { get; set; } = null;
+}

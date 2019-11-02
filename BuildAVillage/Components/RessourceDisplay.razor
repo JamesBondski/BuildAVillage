@@ -1,0 +1,12 @@
+﻿
+<div class="mat-layout-grid-cell">
+    @Ressource.Name : @Village.Storage[@Ressource] (+@Village.Production[@Ressource])
+</div>
+
+@code {
+    [Parameter]
+    public Ressource Ressource { get; set; }
+
+    [Parameter]
+    public Village Village { get; set; } = null;
+}
