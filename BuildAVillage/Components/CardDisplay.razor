@@ -1,0 +1,22 @@
+﻿@inject Game game
+
+<div class="mat-layout-grid-cell">
+    <h3>@Card.Name</h3>
+    <MatButton OnClick="@PlayCard">Play</MatButton>
+    @foreach (var effect in Card.Effects)
+    {
+        <p>@effect.GetType().ToString()</p>
+    }
+</div>
+
+@code {
+
+    [Parameter]
+    public Card Card { get; set; }
+
+    public void PlayCard()
+    {
+        Card.Play(game.world.Village);
+        this.StateHasChanged();
+    }
+}

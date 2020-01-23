@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BAV.Core.Packages.Basic.Cards;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,6 +11,8 @@ namespace BAV.Core.Packages.Basic
         {
             world.Ressources.Add("Gold", new Ressource("Gold", 20, 1));
             world.Ressources.Add("Wood", new Ressource("Wood", 0, 0));
+
+            world.Deck.Add(new SawMillCard());
         }
     }
 }

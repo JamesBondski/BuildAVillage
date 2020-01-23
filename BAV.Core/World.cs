@@ -7,6 +7,7 @@ namespace BAV.Core
     public class World
     {
         public Village Village { get; } = null;
+        public List<Card> Deck { get; } = new List<Card>();
 
         public Dictionary<string, Ressource> Ressources { get; } = new Dictionary<string, Ressource>();
 

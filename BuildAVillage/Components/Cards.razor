@@ -1,0 +1,13 @@
+﻿<div class="mat-layout-grid">
+    <div class="mat-layout-grid-inner">
+        @foreach (var card in CardList)
+        {
+            <CardDisplay Card="@card"/>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<Card> CardList { get; set; } = null;
+}
